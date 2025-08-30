@@ -175,7 +175,7 @@ function getDistance(lat1, lon1, lat2, lon2) {
 
 bot.launch();
 app.get('/', (req, res) => res.send('Bot is running!'));
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server listening on port ${PORT}`);
 });
 console.log('🚀 Bot ishga tushdi');
