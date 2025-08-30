@@ -3,8 +3,8 @@
 const { Telegraf } = require('telegraf');
 const fs = require('fs');
 // 7447083879
-
-// const bot = new Telegraf('6363066689:AAHERMSkDC23x2klieXwXr7fXSWDny6H-TY');
+// xvcv
+// const bot = new Telegraf('bot_token');
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 // JSONdagi provayderlar
