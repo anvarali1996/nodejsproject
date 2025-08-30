@@ -6,7 +6,10 @@ const fs = require('fs');
 // xvcv
 // const bot = new Telegraf('bot_token');
 const bot = new Telegraf(process.env.BOT_TOKEN);
-
+require('dotenv').config();
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
 // JSONdagi provayderlar
 const providers = JSON.parse(fs.readFileSync('./providers.json', 'utf-8'));
 
@@ -171,4 +174,8 @@ function getDistance(lat1, lon1, lat2, lon2) {
 }
 
 bot.launch();
+app.get('/', (req, res) => res.send('Bot is running!'));
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+});
 console.log('🚀 Bot ishga tushdi');
